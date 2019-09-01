@@ -1,0 +1,1252 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00E356F31AD99517003FC87E /* xiangfaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* xiangfaTests.m */; };
+		069D79A5231C0D3200A99FC5 /* QBImagePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069D7955231C0D3100A99FC5 /* QBImagePicker.framework */; };
+		069D79A6231C0D3200A99FC5 /* RSKImageCropper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069D7956231C0D3100A99FC5 /* RSKImageCropper.framework */; };
+		069D79A7231C0D3200A99FC5 /* QBImagePickerController.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 069D7958231C0D3100A99FC5 /* QBImagePickerController.podspec */; };
+		069D79A8231C0D3200A99FC5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 069D7959231C0D3100A99FC5 /* .gitignore */; };
+		069D79A9231C0D3200A99FC5 /* QBImagePicker.strings in Resources */ = {isa = PBXBuildFile; fileRef = 069D795B231C0D3100A99FC5 /* QBImagePicker.strings */; };
+		069D79AA231C0D3200A99FC5 /* QBVideoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D7962231C0D3100A99FC5 /* QBVideoIconView.m */; };
+		069D79AB231C0D3200A99FC5 /* QBVideoIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D7963231C0D3100A99FC5 /* QBVideoIndicatorView.m */; };
+		069D79AC231C0D3200A99FC5 /* QBAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D796A231C0D3100A99FC5 /* QBAlbumCell.m */; };
+		069D79AD231C0D3200A99FC5 /* QBImagePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 069D796B231C0D3100A99FC5 /* QBImagePicker.storyboard */; };
+		069D79AE231C0D3200A99FC5 /* QBAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D796D231C0D3100A99FC5 /* QBAlbumsViewController.m */; };
+		069D79AF231C0D3200A99FC5 /* QBAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D796F231C0D3100A99FC5 /* QBAssetsViewController.m */; };
+		069D79B0231C0D3200A99FC5 /* QBImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D7970231C0D3100A99FC5 /* QBImagePickerController.m */; };
+		069D79B1231C0D3200A99FC5 /* QBCheckmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D7973231C0D3100A99FC5 /* QBCheckmarkView.m */; };
+		069D79B3231C0D3200A99FC5 /* QBSlomoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D7976231C0D3100A99FC5 /* QBSlomoIconView.m */; };
+		069D79B4231C0D3200A99FC5 /* QBAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D7977231C0D3100A99FC5 /* QBAssetCell.m */; };
+		069D79B5231C0D3200A99FC5 /* RSKImageCropper.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 069D797C231C0D3100A99FC5 /* RSKImageCropper.xcworkspace */; };
+		069D79B7231C0D3200A99FC5 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 069D797F231C0D3100A99FC5 /* Makefile */; };
+		069D79B8231C0D3200A99FC5 /* CGGeometry+RSKImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D7984231C0D3200A99FC5 /* CGGeometry+RSKImageCropper.m */; };
+		069D79B9231C0D3200A99FC5 /* RSKInternalUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D7985231C0D3200A99FC5 /* RSKInternalUtility.m */; };
+		069D79BA231C0D3200A99FC5 /* RSKTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D7986231C0D3200A99FC5 /* RSKTouchView.m */; };
+		069D79BB231C0D3200A99FC5 /* UIApplication+RSKImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D7988231C0D3200A99FC5 /* UIApplication+RSKImageCropper.m */; };
+		069D79BC231C0D3200A99FC5 /* RSKImageCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D7989231C0D3200A99FC5 /* RSKImageCropViewController.m */; };
+		069D79BD231C0D3200A99FC5 /* UIImage+RSKImageCropper.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D798A231C0D3200A99FC5 /* UIImage+RSKImageCropper.m */; };
+		069D79BE231C0D3200A99FC5 /* RSKImageCropperStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 069D798F231C0D3200A99FC5 /* RSKImageCropperStrings.bundle */; };
+		069D79BF231C0D3200A99FC5 /* RSKImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D7995231C0D3200A99FC5 /* RSKImageScrollView.m */; };
+		069D79C0231C0D3200A99FC5 /* ImageCropPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D799A231C0D3200A99FC5 /* ImageCropPicker.m */; };
+		069D79C1231C0D3200A99FC5 /* Compression.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D799B231C0D3200A99FC5 /* Compression.m */; };
+		069D79C2231C0D3200A99FC5 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 069D799C231C0D3200A99FC5 /* UIImage+Resize.m */; };
+		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1A30E7562A47EDACA85AD465 /* libPods-xiangfaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E0B052FB786F8F5AC62871E /* libPods-xiangfaTests.a */; };
+		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* xiangfaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* xiangfaTests.m */; };
+		B2FE6726AEBC53BD0103963F /* libPods-xiangfa-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD12157E32DB44FBCA1FF01 /* libPods-xiangfa-tvOSTests.a */; };
+		C438799A1738C7BB30933301 /* libPods-xiangfa-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD747015B4D160F8CF311496 /* libPods-xiangfa-tvOS.a */; };
+		D3B18ED70F38290948DA7933 /* libPods-xiangfa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61FB7E5AE6C0327F5C9C175C /* libPods-xiangfa.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = xiangfa;
+		};
+		069D799F231C0D3200A99FC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 069D7978231C0D3100A99FC5 /* QBImagePicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AAA8FE031ACDA079002A9710;
+			remoteInfo = QBImagePicker;
+		};
+		069D79A3231C0D3200A99FC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 069D7980231C0D3100A99FC5 /* RSKImageCropper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A5BE393D1B32B49D00ECDF88;
+			remoteInfo = RSKImageCropper;
+		};
+		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
+			remoteInfo = "xiangfa-tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		00E356EE1AD99517003FC87E /* xiangfaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xiangfaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* xiangfaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xiangfaTests.m; sourceTree = "<group>"; };
+		069D7955231C0D3100A99FC5 /* QBImagePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QBImagePicker.framework; sourceTree = "<group>"; };
+		069D7956231C0D3100A99FC5 /* RSKImageCropper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RSKImageCropper.framework; sourceTree = "<group>"; };
+		069D7958231C0D3100A99FC5 /* QBImagePickerController.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QBImagePickerController.podspec; sourceTree = "<group>"; };
+		069D7959231C0D3100A99FC5 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		069D795C231C0D3100A99FC5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
+		069D795D231C0D3100A99FC5 /* QBImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBImagePickerController.h; sourceTree = "<group>"; };
+		069D795E231C0D3100A99FC5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/QBImagePicker.strings"; sourceTree = "<group>"; };
+		069D795F231C0D3100A99FC5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
+		069D7960231C0D3100A99FC5 /* QBAssetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAssetsViewController.h; sourceTree = "<group>"; };
+		069D7961231C0D3100A99FC5 /* QBAlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAlbumsViewController.h; sourceTree = "<group>"; };
+		069D7962231C0D3100A99FC5 /* QBVideoIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBVideoIconView.m; sourceTree = "<group>"; };
+		069D7963231C0D3100A99FC5 /* QBVideoIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBVideoIndicatorView.m; sourceTree = "<group>"; };
+		069D7964231C0D3100A99FC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
+		069D7965231C0D3100A99FC5 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
+		069D7966231C0D3100A99FC5 /* QBCheckmarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBCheckmarkView.h; sourceTree = "<group>"; };
+		069D7967231C0D3100A99FC5 /* QBImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBImagePicker.h; sourceTree = "<group>"; };
+		069D7968231C0D3100A99FC5 /* QBAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAssetCell.h; sourceTree = "<group>"; };
+		069D7969231C0D3100A99FC5 /* QBSlomoIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBSlomoIconView.h; sourceTree = "<group>"; };
+		069D796A231C0D3100A99FC5 /* QBAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAlbumCell.m; sourceTree = "<group>"; };
+		069D796B231C0D3100A99FC5 /* QBImagePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QBImagePicker.storyboard; sourceTree = "<group>"; };
+		069D796C231C0D3100A99FC5 /* QBVideoIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBVideoIndicatorView.h; sourceTree = "<group>"; };
+		069D796D231C0D3100A99FC5 /* QBAlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAlbumsViewController.m; sourceTree = "<group>"; };
+		069D796E231C0D3100A99FC5 /* QBVideoIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBVideoIconView.h; sourceTree = "<group>"; };
+		069D796F231C0D3100A99FC5 /* QBAssetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAssetsViewController.m; sourceTree = "<group>"; };
+		069D7970231C0D3100A99FC5 /* QBImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBImagePickerController.m; sourceTree = "<group>"; };
+		069D7971231C0D3100A99FC5 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
+		069D7972231C0D3100A99FC5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/QBImagePicker.strings; sourceTree = "<group>"; };
+		069D7973231C0D3100A99FC5 /* QBCheckmarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBCheckmarkView.m; sourceTree = "<group>"; };
+		069D7974231C0D3100A99FC5 /* QBAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBAlbumCell.h; sourceTree = "<group>"; };
+		069D7975231C0D3100A99FC5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		069D7976231C0D3100A99FC5 /* QBSlomoIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBSlomoIconView.m; sourceTree = "<group>"; };
+		069D7977231C0D3100A99FC5 /* QBAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBAssetCell.m; sourceTree = "<group>"; };
+		069D7978231C0D3100A99FC5 /* QBImagePicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = QBImagePicker.xcodeproj; sourceTree = "<group>"; };
+		069D797C231C0D3100A99FC5 /* RSKImageCropper.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = RSKImageCropper.xcworkspace; sourceTree = "<group>"; };
+		069D797E231C0D3100A99FC5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		069D797F231C0D3100A99FC5 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		069D7980231C0D3100A99FC5 /* RSKImageCropper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RSKImageCropper.xcodeproj; sourceTree = "<group>"; };
+		069D7984231C0D3200A99FC5 /* CGGeometry+RSKImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGGeometry+RSKImageCropper.m"; sourceTree = "<group>"; };
+		069D7985231C0D3200A99FC5 /* RSKInternalUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKInternalUtility.m; sourceTree = "<group>"; };
+		069D7986231C0D3200A99FC5 /* RSKTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKTouchView.m; sourceTree = "<group>"; };
+		069D7987231C0D3200A99FC5 /* RSKImageCropViewController+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSKImageCropViewController+Protected.h"; sourceTree = "<group>"; };
+		069D7988231C0D3200A99FC5 /* UIApplication+RSKImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+RSKImageCropper.m"; sourceTree = "<group>"; };
+		069D7989231C0D3200A99FC5 /* RSKImageCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKImageCropViewController.m; sourceTree = "<group>"; };
+		069D798A231C0D3200A99FC5 /* UIImage+RSKImageCropper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RSKImageCropper.m"; sourceTree = "<group>"; };
+		069D798B231C0D3200A99FC5 /* RSKImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKImageScrollView.h; sourceTree = "<group>"; };
+		069D798C231C0D3200A99FC5 /* RSKTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKTouchView.h; sourceTree = "<group>"; };
+		069D798D231C0D3200A99FC5 /* RSKInternalUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKInternalUtility.h; sourceTree = "<group>"; };
+		069D798E231C0D3200A99FC5 /* CGGeometry+RSKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGGeometry+RSKImageCropper.h"; sourceTree = "<group>"; };
+		069D798F231C0D3200A99FC5 /* RSKImageCropperStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RSKImageCropperStrings.bundle; sourceTree = "<group>"; };
+		069D7990231C0D3200A99FC5 /* UIImage+RSKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RSKImageCropper.h"; sourceTree = "<group>"; };
+		069D7991231C0D3200A99FC5 /* RSKImageCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKImageCropViewController.h; sourceTree = "<group>"; };
+		069D7992231C0D3200A99FC5 /* RSKImageCropper.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = RSKImageCropper.modulemap; sourceTree = "<group>"; };
+		069D7993231C0D3200A99FC5 /* UIApplication+RSKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+RSKImageCropper.h"; sourceTree = "<group>"; };
+		069D7994231C0D3200A99FC5 /* RSKImageCropper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSKImageCropper.h; sourceTree = "<group>"; };
+		069D7995231C0D3200A99FC5 /* RSKImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSKImageScrollView.m; sourceTree = "<group>"; };
+		069D7997231C0D3200A99FC5 /* ImageCropPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCropPicker.h; sourceTree = "<group>"; };
+		069D7998231C0D3200A99FC5 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		069D7999231C0D3200A99FC5 /* Compression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compression.h; sourceTree = "<group>"; };
+		069D799A231C0D3200A99FC5 /* ImageCropPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCropPicker.m; sourceTree = "<group>"; };
+		069D799B231C0D3200A99FC5 /* Compression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Compression.m; sourceTree = "<group>"; };
+		069D799C231C0D3200A99FC5 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* xiangfa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xiangfa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = xiangfa/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = xiangfa/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = xiangfa/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = xiangfa/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = xiangfa/main.m; sourceTree = "<group>"; };
+		2733CE798569D57EE83B6621 /* Pods-xiangfa-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiangfa-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-xiangfa-tvOSTests/Pods-xiangfa-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* xiangfa-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xiangfa-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* xiangfa-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "xiangfa-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E7A9FC7781F5665DCD724DD /* Pods-xiangfaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiangfaTests.debug.xcconfig"; path = "Target Support Files/Pods-xiangfaTests/Pods-xiangfaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		49E0B4494D445A041B7D231D /* Pods-xiangfa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiangfa.debug.xcconfig"; path = "Target Support Files/Pods-xiangfa/Pods-xiangfa.debug.xcconfig"; sourceTree = "<group>"; };
+		61FB7E5AE6C0327F5C9C175C /* libPods-xiangfa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-xiangfa.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E0B052FB786F8F5AC62871E /* libPods-xiangfaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-xiangfaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7001AFC32BA54EEE16DA8E3B /* Pods-xiangfa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiangfa.release.xcconfig"; path = "Target Support Files/Pods-xiangfa/Pods-xiangfa.release.xcconfig"; sourceTree = "<group>"; };
+		7F470A77ECFC12DC0F15D76B /* Pods-xiangfa-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiangfa-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-xiangfa-tvOSTests/Pods-xiangfa-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		8C9401641C61BA70A77A479E /* Pods-xiangfaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiangfaTests.release.xcconfig"; path = "Target Support Files/Pods-xiangfaTests/Pods-xiangfaTests.release.xcconfig"; sourceTree = "<group>"; };
+		DBD12157E32DB44FBCA1FF01 /* libPods-xiangfa-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-xiangfa-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		EE25659BC74E56977B9E9A11 /* Pods-xiangfa-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiangfa-tvOS.release.xcconfig"; path = "Target Support Files/Pods-xiangfa-tvOS/Pods-xiangfa-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		F4BC04FCADB90A8C598F9895 /* Pods-xiangfa-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiangfa-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-xiangfa-tvOS/Pods-xiangfa-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		FD747015B4D160F8CF311496 /* libPods-xiangfa-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-xiangfa-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A30E7562A47EDACA85AD465 /* libPods-xiangfaTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3B18ED70F38290948DA7933 /* libPods-xiangfa.a in Frameworks */,
+				069D79A6231C0D3200A99FC5 /* RSKImageCropper.framework in Frameworks */,
+				069D79A5231C0D3200A99FC5 /* QBImagePicker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E4781E0B4A5D006451C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C438799A1738C7BB30933301 /* libPods-xiangfa-tvOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E48D1E0B4A5D006451C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2FE6726AEBC53BD0103963F /* libPods-xiangfa-tvOSTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E356EF1AD99517003FC87E /* xiangfaTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* xiangfaTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = xiangfaTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		069D7953231C0D3100A99FC5 /* ImageCrop */ = {
+			isa = PBXGroup;
+			children = (
+				069D7954231C0D3100A99FC5 /* ImageCropPickerSDK */,
+				069D7957231C0D3100A99FC5 /* QBImagePicker */,
+				069D797B231C0D3100A99FC5 /* RSKImageCropper */,
+				069D7996231C0D3200A99FC5 /* src */,
+			);
+			name = ImageCrop;
+			path = xiangfa/ImageCrop;
+			sourceTree = "<group>";
+		};
+		069D7954231C0D3100A99FC5 /* ImageCropPickerSDK */ = {
+			isa = PBXGroup;
+			children = (
+				069D7955231C0D3100A99FC5 /* QBImagePicker.framework */,
+				069D7956231C0D3100A99FC5 /* RSKImageCropper.framework */,
+			);
+			path = ImageCropPickerSDK;
+			sourceTree = "<group>";
+		};
+		069D7957231C0D3100A99FC5 /* QBImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				069D7958231C0D3100A99FC5 /* QBImagePickerController.podspec */,
+				069D7959231C0D3100A99FC5 /* .gitignore */,
+				069D795A231C0D3100A99FC5 /* QBImagePicker */,
+				069D7978231C0D3100A99FC5 /* QBImagePicker.xcodeproj */,
+			);
+			path = QBImagePicker;
+			sourceTree = "<group>";
+		};
+		069D795A231C0D3100A99FC5 /* QBImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				069D795B231C0D3100A99FC5 /* QBImagePicker.strings */,
+				069D795D231C0D3100A99FC5 /* QBImagePickerController.h */,
+				069D7960231C0D3100A99FC5 /* QBAssetsViewController.h */,
+				069D7961231C0D3100A99FC5 /* QBAlbumsViewController.h */,
+				069D7962231C0D3100A99FC5 /* QBVideoIconView.m */,
+				069D7963231C0D3100A99FC5 /* QBVideoIndicatorView.m */,
+				069D7966231C0D3100A99FC5 /* QBCheckmarkView.h */,
+				069D7967231C0D3100A99FC5 /* QBImagePicker.h */,
+				069D7968231C0D3100A99FC5 /* QBAssetCell.h */,
+				069D7969231C0D3100A99FC5 /* QBSlomoIconView.h */,
+				069D796A231C0D3100A99FC5 /* QBAlbumCell.m */,
+				069D796B231C0D3100A99FC5 /* QBImagePicker.storyboard */,
+				069D796C231C0D3100A99FC5 /* QBVideoIndicatorView.h */,
+				069D796D231C0D3100A99FC5 /* QBAlbumsViewController.m */,
+				069D796E231C0D3100A99FC5 /* QBVideoIconView.h */,
+				069D796F231C0D3100A99FC5 /* QBAssetsViewController.m */,
+				069D7970231C0D3100A99FC5 /* QBImagePickerController.m */,
+				069D7973231C0D3100A99FC5 /* QBCheckmarkView.m */,
+				069D7974231C0D3100A99FC5 /* QBAlbumCell.h */,
+				069D7975231C0D3100A99FC5 /* Info.plist */,
+				069D7976231C0D3100A99FC5 /* QBSlomoIconView.m */,
+				069D7977231C0D3100A99FC5 /* QBAssetCell.m */,
+			);
+			path = QBImagePicker;
+			sourceTree = "<group>";
+		};
+		069D7979231C0D3100A99FC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				069D79A0231C0D3200A99FC5 /* QBImagePicker.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		069D797B231C0D3100A99FC5 /* RSKImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				069D797C231C0D3100A99FC5 /* RSKImageCropper.xcworkspace */,
+				069D797D231C0D3100A99FC5 /* Framework */,
+				069D797F231C0D3100A99FC5 /* Makefile */,
+				069D7980231C0D3100A99FC5 /* RSKImageCropper.xcodeproj */,
+				069D7983231C0D3200A99FC5 /* RSKImageCropper */,
+			);
+			path = RSKImageCropper;
+			sourceTree = "<group>";
+		};
+		069D797D231C0D3100A99FC5 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				069D797E231C0D3100A99FC5 /* Info.plist */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		069D7981231C0D3100A99FC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				069D79A4231C0D3200A99FC5 /* RSKImageCropper.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		069D7983231C0D3200A99FC5 /* RSKImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				069D7984231C0D3200A99FC5 /* CGGeometry+RSKImageCropper.m */,
+				069D7985231C0D3200A99FC5 /* RSKInternalUtility.m */,
+				069D7986231C0D3200A99FC5 /* RSKTouchView.m */,
+				069D7987231C0D3200A99FC5 /* RSKImageCropViewController+Protected.h */,
+				069D7988231C0D3200A99FC5 /* UIApplication+RSKImageCropper.m */,
+				069D7989231C0D3200A99FC5 /* RSKImageCropViewController.m */,
+				069D798A231C0D3200A99FC5 /* UIImage+RSKImageCropper.m */,
+				069D798B231C0D3200A99FC5 /* RSKImageScrollView.h */,
+				069D798C231C0D3200A99FC5 /* RSKTouchView.h */,
+				069D798D231C0D3200A99FC5 /* RSKInternalUtility.h */,
+				069D798E231C0D3200A99FC5 /* CGGeometry+RSKImageCropper.h */,
+				069D798F231C0D3200A99FC5 /* RSKImageCropperStrings.bundle */,
+				069D7990231C0D3200A99FC5 /* UIImage+RSKImageCropper.h */,
+				069D7991231C0D3200A99FC5 /* RSKImageCropViewController.h */,
+				069D7992231C0D3200A99FC5 /* RSKImageCropper.modulemap */,
+				069D7993231C0D3200A99FC5 /* UIApplication+RSKImageCropper.h */,
+				069D7994231C0D3200A99FC5 /* RSKImageCropper.h */,
+				069D7995231C0D3200A99FC5 /* RSKImageScrollView.m */,
+			);
+			path = RSKImageCropper;
+			sourceTree = "<group>";
+		};
+		069D7996231C0D3200A99FC5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				069D7997231C0D3200A99FC5 /* ImageCropPicker.h */,
+				069D7998231C0D3200A99FC5 /* UIImage+Resize.h */,
+				069D7999231C0D3200A99FC5 /* Compression.h */,
+				069D799A231C0D3200A99FC5 /* ImageCropPicker.m */,
+				069D799B231C0D3200A99FC5 /* Compression.m */,
+				069D799C231C0D3200A99FC5 /* UIImage+Resize.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* xiangfa */ = {
+			isa = PBXGroup;
+			children = (
+				069D7953231C0D3100A99FC5 /* ImageCrop */,
+				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				13B07FB71A68108700A75B9A /* main.m */,
+			);
+			name = xiangfa;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
+				61FB7E5AE6C0327F5C9C175C /* libPods-xiangfa.a */,
+				FD747015B4D160F8CF311496 /* libPods-xiangfa-tvOS.a */,
+				DBD12157E32DB44FBCA1FF01 /* libPods-xiangfa-tvOSTests.a */,
+				6E0B052FB786F8F5AC62871E /* libPods-xiangfaTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* xiangfa */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* xiangfaTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				BE95A38D6DA260F71FE8D590 /* Pods */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* xiangfa.app */,
+				00E356EE1AD99517003FC87E /* xiangfaTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* xiangfa-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* xiangfa-tvOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE95A38D6DA260F71FE8D590 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49E0B4494D445A041B7D231D /* Pods-xiangfa.debug.xcconfig */,
+				7001AFC32BA54EEE16DA8E3B /* Pods-xiangfa.release.xcconfig */,
+				F4BC04FCADB90A8C598F9895 /* Pods-xiangfa-tvOS.debug.xcconfig */,
+				EE25659BC74E56977B9E9A11 /* Pods-xiangfa-tvOS.release.xcconfig */,
+				2733CE798569D57EE83B6621 /* Pods-xiangfa-tvOSTests.debug.xcconfig */,
+				7F470A77ECFC12DC0F15D76B /* Pods-xiangfa-tvOSTests.release.xcconfig */,
+				2E7A9FC7781F5665DCD724DD /* Pods-xiangfaTests.debug.xcconfig */,
+				8C9401641C61BA70A77A479E /* Pods-xiangfaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* xiangfaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "xiangfaTests" */;
+			buildPhases = (
+				26E19EA15C413640A9317248 /* [CP] Check Pods Manifest.lock */,
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = xiangfaTests;
+			productName = xiangfaTests;
+			productReference = 00E356EE1AD99517003FC87E /* xiangfaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* xiangfa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "xiangfa" */;
+			buildPhases = (
+				D7C7AD28A492ED8B41686651 /* [CP] Check Pods Manifest.lock */,
+				FD10A7F022414F080027D42C /* Start Packager */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xiangfa;
+			productName = xiangfa;
+			productReference = 13B07F961A680F5B00A75B9A /* xiangfa.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D02E47A1E0B4A5D006451C7 /* xiangfa-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "xiangfa-tvOS" */;
+			buildPhases = (
+				191789C53F3D796F335356E8 /* [CP] Check Pods Manifest.lock */,
+				FD10A7F122414F3F0027D42C /* Start Packager */,
+				2D02E4771E0B4A5D006451C7 /* Sources */,
+				2D02E4781E0B4A5D006451C7 /* Frameworks */,
+				2D02E4791E0B4A5D006451C7 /* Resources */,
+				2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "xiangfa-tvOS";
+			productName = "xiangfa-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* xiangfa-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2D02E48F1E0B4A5D006451C7 /* xiangfa-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "xiangfa-tvOSTests" */;
+			buildPhases = (
+				773F91DD4462B55C8230325F /* [CP] Check Pods Manifest.lock */,
+				2D02E48C1E0B4A5D006451C7 /* Sources */,
+				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
+				2D02E48E1E0B4A5D006451C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
+			);
+			name = "xiangfa-tvOSTests";
+			productName = "xiangfa-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* xiangfa-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Facebook;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 5A226H6X6Y;
+					};
+					2D02E47A1E0B4A5D006451C7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					2D02E48F1E0B4A5D006451C7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2D02E47A1E0B4A5D006451C7;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "xiangfa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+				de,
+				"zh-Hans",
+				ja,
+				es,
+				pl,
+				fr,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 069D7979231C0D3100A99FC5 /* Products */;
+					ProjectRef = 069D7978231C0D3100A99FC5 /* QBImagePicker.xcodeproj */;
+				},
+				{
+					ProductGroup = 069D7981231C0D3100A99FC5 /* Products */;
+					ProjectRef = 069D7980231C0D3100A99FC5 /* RSKImageCropper.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* xiangfa */,
+				00E356ED1AD99517003FC87E /* xiangfaTests */,
+				2D02E47A1E0B4A5D006451C7 /* xiangfa-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* xiangfa-tvOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		069D79A0231C0D3200A99FC5 /* QBImagePicker.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = QBImagePicker.framework;
+			remoteRef = 069D799F231C0D3200A99FC5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		069D79A4231C0D3200A99FC5 /* RSKImageCropper.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RSKImageCropper.framework;
+			remoteRef = 069D79A3231C0D3200A99FC5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				069D79A9231C0D3200A99FC5 /* QBImagePicker.strings in Resources */,
+				069D79B5231C0D3200A99FC5 /* RSKImageCropper.xcworkspace in Resources */,
+				069D79A8231C0D3200A99FC5 /* .gitignore in Resources */,
+				069D79A7231C0D3200A99FC5 /* QBImagePickerController.podspec in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				069D79BE231C0D3200A99FC5 /* RSKImageCropperStrings.bundle in Resources */,
+				069D79AD231C0D3200A99FC5 /* QBImagePicker.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E4791E0B4A5D006451C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E48E1E0B4A5D006451C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		191789C53F3D796F335356E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-xiangfa-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26E19EA15C413640A9317248 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-xiangfaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		773F91DD4462B55C8230325F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-xiangfa-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7C7AD28A492ED8B41686651 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-xiangfa-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD10A7F022414F080027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD10A7F122414F3F0027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* xiangfaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				069D79C1231C0D3200A99FC5 /* Compression.m in Sources */,
+				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				069D79AF231C0D3200A99FC5 /* QBAssetsViewController.m in Sources */,
+				069D79B8231C0D3200A99FC5 /* CGGeometry+RSKImageCropper.m in Sources */,
+				069D79AE231C0D3200A99FC5 /* QBAlbumsViewController.m in Sources */,
+				069D79BD231C0D3200A99FC5 /* UIImage+RSKImageCropper.m in Sources */,
+				069D79AC231C0D3200A99FC5 /* QBAlbumCell.m in Sources */,
+				069D79BB231C0D3200A99FC5 /* UIApplication+RSKImageCropper.m in Sources */,
+				069D79B0231C0D3200A99FC5 /* QBImagePickerController.m in Sources */,
+				069D79BA231C0D3200A99FC5 /* RSKTouchView.m in Sources */,
+				069D79C0231C0D3200A99FC5 /* ImageCropPicker.m in Sources */,
+				069D79B3231C0D3200A99FC5 /* QBSlomoIconView.m in Sources */,
+				069D79BC231C0D3200A99FC5 /* RSKImageCropViewController.m in Sources */,
+				069D79B7231C0D3200A99FC5 /* Makefile in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				069D79B1231C0D3200A99FC5 /* QBCheckmarkView.m in Sources */,
+				069D79B9231C0D3200A99FC5 /* RSKInternalUtility.m in Sources */,
+				069D79AA231C0D3200A99FC5 /* QBVideoIconView.m in Sources */,
+				069D79B4231C0D3200A99FC5 /* QBAssetCell.m in Sources */,
+				069D79C2231C0D3200A99FC5 /* UIImage+Resize.m in Sources */,
+				069D79BF231C0D3200A99FC5 /* RSKImageScrollView.m in Sources */,
+				069D79AB231C0D3200A99FC5 /* QBVideoIndicatorView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E4771E0B4A5D006451C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */,
+				2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D02E48C1E0B4A5D006451C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DCD954D1E0B4F2C00145EB5 /* xiangfaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* xiangfa */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D02E47A1E0B4A5D006451C7 /* xiangfa-tvOS */;
+			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		069D795B231C0D3100A99FC5 /* QBImagePicker.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				069D795C231C0D3100A99FC5 /* de */,
+				069D795E231C0D3100A99FC5 /* zh-Hans */,
+				069D795F231C0D3100A99FC5 /* ja */,
+				069D7964231C0D3100A99FC5 /* en */,
+				069D7965231C0D3100A99FC5 /* es */,
+				069D7971231C0D3100A99FC5 /* pl */,
+				069D7972231C0D3100A99FC5 /* fr */,
+			);
+			name = QBImagePicker.strings;
+			sourceTree = "<group>";
+		};
+		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13B07FB21A68108700A75B9A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			path = xiangfa;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E7A9FC7781F5665DCD724DD /* Pods-xiangfaTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = xiangfaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xiangfa.app/xiangfa";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C9401641C61BA70A77A479E /* Pods-xiangfaTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = xiangfaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xiangfa.app/xiangfa";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E0B4494D445A041B7D231D /* Pods-xiangfa.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 5A226H6X6Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/xiangfa/ImageCrop/ImageCropPickerSDK",
+				);
+				INFOPLIST_FILE = xiangfa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.com.xiangfa;
+				PRODUCT_NAME = xiangfa;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7001AFC32BA54EEE16DA8E3B /* Pods-xiangfa.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5A226H6X6Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/xiangfa/ImageCrop/ImageCropPickerSDK",
+				);
+				INFOPLIST_FILE = xiangfa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.com.xiangfa;
+				PRODUCT_NAME = xiangfa;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		2D02E4971E0B4A5E006451C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4BC04FCADB90A8C598F9895 /* Pods-xiangfa-tvOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "xiangfa-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.xiangfa-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		2D02E4981E0B4A5E006451C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE25659BC74E56977B9E9A11 /* Pods-xiangfa-tvOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "xiangfa-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.xiangfa-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
+		2D02E4991E0B4A5E006451C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2733CE798569D57EE83B6621 /* Pods-xiangfa-tvOSTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "xiangfa-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.xiangfa-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xiangfa-tvOS.app/xiangfa-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Debug;
+		};
+		2D02E49A1E0B4A5E006451C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F470A77ECFC12DC0F15D76B /* Pods-xiangfa-tvOSTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "xiangfa-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.xiangfa-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xiangfa-tvOS.app/xiangfa-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "xiangfaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "xiangfa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "xiangfa-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D02E4971E0B4A5E006451C7 /* Debug */,
+				2D02E4981E0B4A5E006451C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "xiangfa-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D02E4991E0B4A5E006451C7 /* Debug */,
+				2D02E49A1E0B4A5E006451C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "xiangfa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}
