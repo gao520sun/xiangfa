@@ -23,7 +23,7 @@ export default class MessageListView extends Component {
     renderCell = ({item}) => (
         <MessageCell data = {item} {...this.props}/>
     )
-    _keyExtractor = (item) => item.messageId + '';
+    _keyExtractor = (item) => item.msgId + '';
 
     render() {
         return (
@@ -48,5 +48,5 @@ MessageListView.defaultProps = {
     dataSource: []
 };
 MessageListView.propTypes = {
-    dataSource: PropTypes.array.isRequired
+    dataSource: PropTypes.array
 };

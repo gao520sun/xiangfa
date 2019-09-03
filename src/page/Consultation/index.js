@@ -3,74 +3,57 @@ import {View, KeyboardAvoidingView, TouchableOpacity} from 'react-native';
 import {Toast} from 'teaset';
 
 import PreviewImageViewer from '../../Components/PreviewImageViewer';
-
+import {uuid} from '../../utils/Commons';
+import {isArray} from '../../utils/Utils';
 import ImageCrop from '../../utils/ImageCrop';
 
 import {getimageUrls} from './Utils/ImageUtils';
 import AudioRecorder from './Utils/AudioRecorder';
 import AudioSound from './Utils/AudioSound';
-
+import DBConsultHandle from './DBHandle';
 import MessageListView from './MessageListView';
 import MessageToolInput from './MessageToolInput';
 
 import aimgae from './Image/imageee.png';
 import imga from './Image/imga.png';
+import '../../service/RealmManager/consultationManager/DBManager';
 
 export default class Consultation extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            dataTemp:this.tempData(),
+            dataTemp:[],
         };
         this.showMoreTool = false;
     }
-    rnd(n, m) {
-        const random = Math.floor(Math.random() * (m - n + 1) + n);
-        return random;
+    componentDidMount() {
+        this.getData();
     }
-    tempData = () => {
-        const da = [];
-        for(let i = 0; i < 30; i++) {
-            const imags = [
-                'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566647223751&di=17fdebaf061386b4c47917d05c896695&imgtype=0&src=http%3A%2F%2Fimage.finance.china.cn%2Fupload%2Fimages%2F2014%2F0410%2F085000%2F0_2323627_580fd395d60d023a4cf8b45c31cd1218.jpg',
-                'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566647223751&di=c6ff9dae4be950bf2348317f49fb41c9&imgtype=0&src=http%3A%2F%2Fimg3.ph.126.net%2F1KDLXCf_5HxC0KDAxUQZSg%3D%3D%2F2866541162838628463.jpg',
-                'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566647305900&di=53fe18ca0d040d8a506221e369a7496e&imgtype=0&src=http%3A%2F%2Fpic30.nipic.com%2F20130527%2F12858576_115546326147_2.jpg',
-                aimgae, imga
-            ];
-            const jg = this.rnd(0, 2);
-            let actionType = '';
-            switch (jg) {
-            case 0:
-                actionType = 'TEXT';
-                break;
-            case 1:
-                actionType = 'IMAGE';
-                break;
-            case 2:
-                actionType = 'VOICE';
-                break;
+    getData = () => {
+        const data = DBConsultHandle.gerMsgData().sorted('sendTime', true);
 
-            default:
-                break;
-            }
-            const dic = {
-                messageId: i,
-                messageType: actionType,
-                messgae: {text: '好好的好好的好好的好好的好好的好好的好好的好好的' + i,
-                    imgUrl: imags[this.rnd(0, 4)], voiceUrl: '', time:new Date().getTime()},
-                isMe: jg === 0 ? true : false,
-                user:{
-                    1: {
-                        avatarUrl: require('./Image/user1.jpg')
-                    },
-                    0: {
-                        avatarUrl: require('./Image/user2.jpg')
-                    },
-                }
-            };
-            da.push(dic);
+        this.setState({
+            dataTemp:data
+        });
+    }
+    // 发送文字
+    sendTextMsg = (text) => {
+        try {
+            DBConsultHandle.insertData({
+                msgId: uuid(),
+                messageType:'TEXT',
+                sessionId: '12312312',
+                content:JSON.stringify({text:text}),
+                sendTime: new Date().getTime(),
+                sender: JSON.stringify({avatarUrl: require('./Image/user1.jpg')}),
+                isMe:true,
+                status: '1',
+                userId: 10000,
+            });
+        } catch (error) {
+            //
         }
-        return da;
+        this.getData();
     }
     // 点击图片查看大图图片
     checkImg = (imgData) => {
@@ -103,13 +86,47 @@ export default class Consultation extends Component {
     }
     // 使用照片
     photoBtn = async() => {
-        const imgs = await ImageCrop.openPicker();
-        console.log('相册imgas', imgs);
+        try {
+            const imgs = await ImageCrop.openPicker();
+            if(imgs && !isArray(imgs)) {
+                DBConsultHandle.insertData({
+                    msgId: uuid(),
+                    messageType:'IMAGE',
+                    sessionId: '12312312',
+                    content:JSON.stringify({url:imgs.sourceURL, width:imgs.width, height:imgs.height}),
+                    sendTime: new Date().getTime(),
+                    sender: JSON.stringify({avatarUrl: require('./Image/user1.jpg')}),
+                    isMe:true,
+                    status: '1',
+                    userId: 10000,
+                });
+            }
+        } catch (error) {
+            //
+        }
+        this.getData();
     }
     // 使用相机
     cameraBtn = async() => {
-        const imgs = await ImageCrop.openCamera();
-        console.log('相机imgas', imgs);
+        try {
+            const imgs = await ImageCrop.openCamera();
+            if(imgs && !isArray(imgs)) {
+                DBConsultHandle.insertData({
+                    msgId: uuid(),
+                    messageType:'IMAGE',
+                    sessionId: '12312312',
+                    content:JSON.stringify({url:imgs.sourceURL, width:imgs.width, height:imgs.height}),
+                    sendTime: new Date().getTime(),
+                    sender: JSON.stringify({avatarUrl: require('./Image/user1.jpg')}),
+                    isMe:true,
+                    status: '1',
+                    userId: 10000,
+                });
+            }
+        } catch (error) {
+            //
+        }
+        this.getData();
     }
     // 滑动事件
     onScroll = () => {
@@ -122,10 +139,16 @@ export default class Consultation extends Component {
         //         this.toolInputView.hideToolHandle();
         //     }
         // }
+        // console.log('this.showMoreTool:::', this.showMoreTool);
+    }
+    onMomentumScrollEnd = () => {
+        console.log('aaaaaaa');
+        this.showMoreTool = false;
     }
     moreTool = () => {
         if(this.msgListView) {
             this.showMoreTool = true;
+            console.log('this.msgListView:::', this.msgListView.conten);
             this.msgListView.scrollToIndex({index:0, viewPosition:0});
         }
     }
@@ -137,16 +160,18 @@ export default class Consultation extends Component {
             photoBtn: this.photoBtn,
             cameraBtn: this.cameraBtn,
             moreTool:this.moreTool,
+            sendTextMsg:this.sendTextMsg
         };
         const listPress = {
             checkImg: this.checkImg,
             onScroll:this.onScroll,
+            onMomentumScrollEnd:this.onMomentumScrollEnd
         };
         return (
             <View style = {{flex:1, backgroundColor:'#EFEFF0'}}>
                 <MessageListView
                     ref = {(msgListView) => (this.msgListView = msgListView)}
-                    dataSource = {this.state.dataTemp}
+                    dataSource = {this.state.dataTemp || []}
                     {...listPress}/>
                 <KeyboardAvoidingView behavior={'padding'}>
                     <MessageToolInput

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Animated, View, Image, TextInput, Text, TouchableOpacity, PanResponder, Keyboard, Platform} from 'react-native';
+import {Animated, View, Text, Image, TextInput, TouchableOpacity, PanResponder, Keyboard, Platform} from 'react-native';
 import {Toast} from 'teaset';
 
 import CheckPermission from '../../../utils/CheckPermission';
@@ -26,6 +26,8 @@ export default class MessageToolInput extends Component {
             moreToolAnim: new Animated.Value(initMoreToolBottom),
             moreToolOpacityAnim: new Animated.Value(0),
             showMoreToolAnim: false,
+            showSendBtn:false,
+            textValue:'',
         };
     }
     componentDidMount() {
@@ -41,6 +43,15 @@ export default class MessageToolInput extends Component {
     componentWillUnmount() {
         this.keyboardWillShowSub.remove();
         this.keyboardWillHideSub.remove();
+    }
+    onSendMsg = () => {
+        if(this.props.sendTextMsg) {
+            this.props.sendTextMsg(this.state.textValue);
+        }
+        this.inputView.clear();
+        this.setState({
+            showSendBtn:false,
+        });
     }
     // 键盘显示
     keyboardWillShow = () => {
@@ -96,7 +107,6 @@ export default class MessageToolInput extends Component {
     }
     // 工具栏，不同的按钮，不同处理
     showToolHandle = (params = {moreTool: false, keyBoard: false}) => {
-        console.log('params:::', params, this.state.showMoreToolAnim);
         if(params.moreTool) {
             this.moreAnim(true);
             this.showKeyBoard(true);
@@ -132,6 +142,16 @@ export default class MessageToolInput extends Component {
             }
         }
     }
+    _onChangeText = (text) => {
+        if(text.length > 0) {
+            if(!this.state.showSendBtn) {
+                this.setState({showSendBtn:true});
+            }
+        }else if(this.state.showSendBtn) {
+            this.setState({showSendBtn:false});
+        }
+        this.setState({textValue:text});
+    }
     // 按住说话状态
     pressMic = () => {
         const {inputBarHeight} = this.state;
@@ -144,9 +164,14 @@ export default class MessageToolInput extends Component {
     inputContent = () => (
         <View style = {[style.inputView, {height:scaleHeight(this.state.inputBarHeight)}]}>
             <TextInput
+                ref = {(input) => (this.inputView = input)}
                 style = {style.textInput}
+                allowFontScaling = {false}
                 multiline
+                maxLength = {1000}
+                value = {this.state.textValue}
                 onContentSizeChange={this._onContentSizeChange}
+                onChangeText = {this._onChangeText}
             />
         </View>
     )
@@ -167,14 +192,19 @@ export default class MessageToolInput extends Component {
             <Image style = {style.msgAdd} source = {MsgAdd}/>
         </TouchableOpacity>
     )
+    rightSendBtnView = () => (
+        <TouchableOpacity activeOpacity = {0.8} style = {style.sendBtn} onPress = {this.onSendMsg}>
+            <Text style = {style.sendBtnText}>{'发送'}</Text>
+        </TouchableOpacity>
+    )
     render() {
-        const {isKeyBoard} = this.state;
+        const {isKeyBoard, showSendBtn} = this.state;
         return (
             <View>
                 <View style = {[style.container, {height:scaleHeight(14) + scaleHeight(this.state.inputBarHeight)}]}>
                     {this.leftChangeMicAndKeybord()}
                     {isKeyBoard ? this.inputContent() : this.pressMic()}
-                    {this.rightMoreView()}
+                    {!showSendBtn ? this.rightMoreView() : this.rightSendBtnView()}
                 </View>
                 <Animated.View style = {{opacity: this.state.moreToolOpacityAnim, marginBottom:this.state.moreToolAnim}}>
                     <MoreToolsComponent {...this.props} />

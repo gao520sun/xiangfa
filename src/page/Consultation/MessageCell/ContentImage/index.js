@@ -17,12 +17,12 @@ export default class ContentImage extends Component {
         };
     }
     componentDidMount() {
-        const msg = this.props.data && this.props.data.messgae || {};
-        if(msg.imgUrl && typeof msg.imgUrl === 'string' && msg.imgUrl.indexOf('http') !== -1) {
-            this.getImageSize(msg.imgUrl);
-        }else {
-            this.getImagesAssetSource(msg.imgUrl);
-        }
+        // const msg = this.props.data && this.props.data.messgae || {};
+        // if(msg.imgUrl && typeof msg.imgUrl === 'string' && msg.imgUrl.indexOf('http') !== -1) {
+        //     this.getImageSize(msg.imgUrl);
+        // }else if(msg.imgUrl && typeof msg.imgUrl === 'number') {
+        //     this.getImagesAssetSource(msg.imgUrl);
+        // }
     }
     // 点图片
     _checkImg = () => {
@@ -44,7 +44,7 @@ export default class ContentImage extends Component {
                     imgHeight:scaleHeight(hTemp),
                 });
             }
-        }, () => {});
+        });
     }
     // 获取本地宽高
     getImagesAssetSource = (imgUrl) => {
@@ -61,16 +61,24 @@ export default class ContentImage extends Component {
             });
         }
     }
-    render() {
-        const msg = this.props.data && this.props.data.messgae || {};
-        let source = {uri:msg.imgUrl};
-        if(msg.imgUrl && typeof msg.imgUrl !== 'string') {
-            source = msg.imgUrl;
+    getImageUrlWidthAndHeight = (msg) => {
+        let widht = scaleWidth(wTemp);
+        let height = scaleHeight(hTemp);
+        if(msg) {
+            if(msg.width > msg.height) {
+                widht = scaleWidth(hTemp);
+                height = scaleHeight(wTemp);
+            }
         }
-        const {imgWidth, imgHeight} = this.state;
+        return {imgWidth:widht, imgHeight:height};
+    }
+    render() {
+        const msg = this.props.data && this.props.data.content && JSON.parse(this.props.data.content) || {};
+        const imgWH = this.getImageUrlWidthAndHeight(msg);
+        const source = {uri:msg.url};
         return (
             <TouchableOpacity activeOpacity = {0.8} onPress = {this._checkImg} style = {[style.container]}>
-                <Image style = {[style.headerImg, {width:imgWidth, height:imgHeight}]} source = {source}/>
+                <Image style = {[style.headerImg, {width:imgWH.imgWidth, height:imgWH.imgHeight}]} source = {source}/>
             </TouchableOpacity>
         );
     }

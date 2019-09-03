@@ -10,7 +10,7 @@ export default class ContentVoice extends Component {
         return isMe ? '#D3E6FF' : 'white';
     }
     render() {
-        const msg = this.props.data && this.props.data.messgae || {};
+        const msg = this.props.data && this.props.data.content && JSON.parse(this.props.data.content) || {};
         return (
             <View style = {[style.container, {backgroundColor: this.getBgColor()}]} >
                 <Text>{'2``'}</Text>

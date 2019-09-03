@@ -23,6 +23,20 @@ const styles = StyleSheet.create({
         marginHorizontal:scaleWidth(15),
         marginBottom:scaleHeight(14),
     },
+    sendBtn:{
+        backgroundColor:'#449aff', alignItems:'center', justifyContent:'center',
+        width:scaleHeight(50),
+        height:scaleHeight(30),
+        marginHorizontal:scaleWidth(15),
+        marginBottom:scaleHeight(14),
+        // paddingHorizontal:scaleWidth(15),
+        // paddingVertical:scaleHeight(14),
+        borderRadius:scaleHeight(2)
+    },
+    sendBtnText: {
+        fontSize:spText(14),
+        color:'white'
+    },
     micBgView: {
         flex:1,
         backgroundColor:'white',
