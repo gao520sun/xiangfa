@@ -24,6 +24,12 @@ class DBConsultHandle extends React.Component {
             }
         }
     }
+    // 根据主键更新
+    updateMsgData = (updateContent = {}) => {
+        if(updateContent && updateContent.msgId) {
+            this.insertData(updateContent);
+        }
+    }
     gerMsgData = () => {
         return DBManager.realmDB.objects('notification');
     }

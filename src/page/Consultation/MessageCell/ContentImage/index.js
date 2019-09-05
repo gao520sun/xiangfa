@@ -27,6 +27,7 @@ export default class ContentImage extends Component {
     // 点图片
     _checkImg = () => {
         if(this.props.checkImg) {
+            // const msg = this.props.data && this.props.data.content && JSON.parse(this.props.data.content) || {};
             this.props.checkImg(this.props.data);
         }
     }

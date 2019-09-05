@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-import {scaleHeight, spText} from '../../../../utils/Commons';
+import {scaleHeight, scaleWidth} from '../../../../utils/Commons';
 
 const styles = StyleSheet.create({
     container: {
@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         paddingVertical: scaleHeight(10),
         paddingHorizontal: scaleHeight(10),
         borderRadius: scaleHeight(5),
-        minWidth:'20%'
+        minWidth:scaleWidth(60)
     },
 });
 export default styles;

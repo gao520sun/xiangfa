@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
-import {View, KeyboardAvoidingView, TouchableOpacity} from 'react-native';
-import {Toast} from 'teaset';
+import {View, KeyboardAvoidingView} from 'react-native';
 
 import PreviewImageViewer from '../../Components/PreviewImageViewer';
 import {uuid} from '../../utils/Commons';
-import {isArray} from '../../utils/Utils';
-import ImageCrop from '../../utils/ImageCrop';
+// import ImageCrop from '../../utils/ImageCrop';
+import ImagePicker from '../../utils/ImagePicker';
 
 import {getimageUrls} from './Utils/ImageUtils';
 import AudioRecorder from './Utils/AudioRecorder';
@@ -14,10 +13,11 @@ import DBConsultHandle from './DBHandle';
 import MessageListView from './MessageListView';
 import MessageToolInput from './MessageToolInput';
 
-import aimgae from './Image/imageee.png';
-import imga from './Image/imga.png';
+// import aimgae from './Image/imageee.png';
+// import imga from './Image/imga.png';
 import '../../service/RealmManager/consultationManager/DBManager';
 
+const avIcon = 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567611112176&di=469a04f6dab0e15ccd9f86210b779c40&imgtype=0&src=http%3A%2F%2Fpic.k73.com%2Fup%2Fsoft%2F2016%2F0102%2F092635_44907394.jpg';
 export default class Consultation extends Component {
     constructor(props) {
         super(props);
@@ -31,29 +31,34 @@ export default class Consultation extends Component {
     }
     getData = () => {
         const data = DBConsultHandle.gerMsgData().sorted('sendTime', true);
-
         this.setState({
-            dataTemp:data
+            dataTemp:data || []
         });
+    }
+    // 把数据放在本地
+    saveMassageDataRealm = ({messageType = '', content = {}}) => {
+        if(!messageType) {return;}
+        DBConsultHandle.insertData({
+            msgId: uuid(),
+            messageType:messageType,
+            sessionId: '12312312',
+            content:JSON.stringify(content),
+            sendTime: new Date().getTime(),
+            sender: JSON.stringify({avatarUrl: avIcon}),
+            isMe:true,
+            status: '1',
+            userId: 10000,
+        });
+        this.getData();
     }
     // 发送文字
     sendTextMsg = (text) => {
         try {
-            DBConsultHandle.insertData({
-                msgId: uuid(),
-                messageType:'TEXT',
-                sessionId: '12312312',
-                content:JSON.stringify({text:text}),
-                sendTime: new Date().getTime(),
-                sender: JSON.stringify({avatarUrl: require('./Image/user1.jpg')}),
-                isMe:true,
-                status: '1',
-                userId: 10000,
-            });
+            const content = {text:text};
+            this.saveMassageDataRealm({content, messageType:'TEXT'});
         } catch (error) {
             //
         }
-        this.getData();
     }
     // 点击图片查看大图图片
     checkImg = (imgData) => {
@@ -69,16 +74,24 @@ export default class Consultation extends Component {
     finishVoiceRecording = async () => {
         await AudioRecorder.finishVoiceRecording();
         const duration = await AudioSound.getVoiceDuration(AudioRecorder.filePathAudio);
-        console.log('duration:::', duration);
-        // this.playRecording(AudioRecorder.filePathAudio);
+        const content = {voiceUrl:AudioRecorder.filePathAudio, voiceLength:duration, isPlaying:false};
+        this.saveMassageDataRealm({content, messageType:'VOICE'});
     }
     // 停止录音
     stopVoiceRecording = async() => {
         await AudioRecorder.stopVoiceRecording();
     }
     // 播放录音
-    playRecording = async (audioPath) => {
-        AudioSound.playRecording(audioPath);
+    playRecording = async (data, callBack) => {
+        const msg = JSON.parse(data.content);
+        if(AudioSound.getIsPlaying() && msg.voiceUrl === AudioSound.currentPath) {
+            AudioSound.stopPlayRecording();
+        }else {
+            if(AudioSound.getIsPlaying()) {
+                AudioSound.stopPlayRecording();
+            }
+            AudioSound.playRecording(msg.voiceUrl, callBack);
+        }
     }
     // 停止播放录音
     stopPlayRecording = () => {
@@ -87,46 +100,26 @@ export default class Consultation extends Component {
     // 使用照片
     photoBtn = async() => {
         try {
-            const imgs = await ImageCrop.openPicker();
-            if(imgs && !isArray(imgs)) {
-                DBConsultHandle.insertData({
-                    msgId: uuid(),
-                    messageType:'IMAGE',
-                    sessionId: '12312312',
-                    content:JSON.stringify({url:imgs.sourceURL, width:imgs.width, height:imgs.height}),
-                    sendTime: new Date().getTime(),
-                    sender: JSON.stringify({avatarUrl: require('./Image/user1.jpg')}),
-                    isMe:true,
-                    status: '1',
-                    userId: 10000,
-                });
+            const imgs = await ImagePicker.openImagePicker();
+            if(imgs) {
+                const content = {url:imgs.uri, width:imgs.width, height:imgs.height};
+                this.saveMassageDataRealm({content, messageType:'IMAGE'});
             }
         } catch (error) {
             //
         }
-        this.getData();
     }
     // 使用相机
     cameraBtn = async() => {
         try {
-            const imgs = await ImageCrop.openCamera();
-            if(imgs && !isArray(imgs)) {
-                DBConsultHandle.insertData({
-                    msgId: uuid(),
-                    messageType:'IMAGE',
-                    sessionId: '12312312',
-                    content:JSON.stringify({url:imgs.sourceURL, width:imgs.width, height:imgs.height}),
-                    sendTime: new Date().getTime(),
-                    sender: JSON.stringify({avatarUrl: require('./Image/user1.jpg')}),
-                    isMe:true,
-                    status: '1',
-                    userId: 10000,
-                });
+            const imgs = await ImagePicker.openCamera();
+            if(imgs) {
+                const content = {url:imgs.uri, width:imgs.width, height:imgs.height};
+                this.saveMassageDataRealm({content, messageType:'IMAGE'});
             }
         } catch (error) {
             //
         }
-        this.getData();
     }
     // 滑动事件
     onScroll = () => {
@@ -160,12 +153,13 @@ export default class Consultation extends Component {
             photoBtn: this.photoBtn,
             cameraBtn: this.cameraBtn,
             moreTool:this.moreTool,
-            sendTextMsg:this.sendTextMsg
+            sendTextMsg:this.sendTextMsg,
         };
         const listPress = {
             checkImg: this.checkImg,
             onScroll:this.onScroll,
-            onMomentumScrollEnd:this.onMomentumScrollEnd
+            onMomentumScrollEnd:this.onMomentumScrollEnd,
+            playRecording:this.playRecording
         };
         return (
             <View style = {{flex:1, backgroundColor:'#EFEFF0'}}>

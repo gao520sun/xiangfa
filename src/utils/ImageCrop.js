@@ -7,7 +7,7 @@ import {
 const ImageCropPicker = NativeModules.ImageCropPicker;
 
 let instance = null;
-class NetinfoUtils extends React.Component {
+class ImageCrop extends React.Component {
     constructor(props, context) {
         super(props, context);
         if(!instance) {
@@ -55,4 +55,4 @@ class NetinfoUtils extends React.Component {
     }
 }
 
-export default new NetinfoUtils();
+export default new ImageCrop();

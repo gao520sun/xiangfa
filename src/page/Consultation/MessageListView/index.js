@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {View, FlatList} from 'react-native';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import MessageCell from '../MessageCell';
 
@@ -30,7 +30,7 @@ export default class MessageListView extends Component {
             <View style = {{flex:1}}>
                 <FlatList
                     ref = {(listView) => (this.listView = listView)}
-                    data = {this.props.dataSource}
+                    data = {this.props.dataSource || []}
                     renderItem = {this.renderCell}
                     keyExtractor = {this._keyExtractor}
                     initialNumToRender = {50}
@@ -48,5 +48,5 @@ MessageListView.defaultProps = {
     dataSource: []
 };
 MessageListView.propTypes = {
-    dataSource: PropTypes.array
+    // dataSource: PropTypes.array
 };
